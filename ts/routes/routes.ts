@@ -4,7 +4,7 @@ import { addTodoToDatabase, getAllTodos } from "../model/todoModel";
 export const router = Router();
 
 // get all todos from database
-router.get("/todo", async (req: Request, res: Response) => {
+router.get("/get-all-todos", async (req: Request, res: Response) => {
     const allTodos = await getAllTodos();
 
     res.json({ allTodos });
