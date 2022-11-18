@@ -7,7 +7,6 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "typescript-build": "tsc --build",
         "typescript-watch": "tsc --watch",
-        "start": "node js/app.js",
         "start-development-windows": "set NODE_ENV=development && node js/app.js",
         "start-production-windows": "set NODE_ENV=production && node js/app.js",
         "start-development-unix": "NODE_ENV=development node js/app.js",
