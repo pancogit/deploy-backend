@@ -15,5 +15,7 @@ exports.serverAddress = process.env.SERVER_ADDRESS || "localhost";
 // get client configurations
 const clientPort = Number(process.env.CLIENT_PORT) || 6000;
 const clientAddress = process.env.CLIENT_ADDRESS || "localhost";
-exports.clientOrigin = `${clientAddress}:${clientPort}`;
+exports.clientOrigin = process.env.NODE_ENV === "development"
+    ? `${clientAddress}:${clientPort}`
+    : clientAddress;
 //# sourceMappingURL=configs.js.map

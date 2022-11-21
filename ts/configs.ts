@@ -14,4 +14,7 @@ export const serverAddress = process.env.SERVER_ADDRESS || "localhost";
 const clientPort = Number(process.env.CLIENT_PORT) || 6000;
 const clientAddress = process.env.CLIENT_ADDRESS || "localhost";
 
-export const clientOrigin = `${clientAddress}:${clientPort}`;
+export const clientOrigin =
+    process.env.NODE_ENV === "development"
+        ? `${clientAddress}:${clientPort}`
+        : clientAddress;
